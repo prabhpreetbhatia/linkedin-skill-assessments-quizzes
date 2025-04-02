@@ -445,7 +445,7 @@ modified: beta-notes.js
 - [ ] 5
 - [x] 2
 - [ ] 4
-  > In Git, there are two main ways to integrate changes from one branch into another: the merge and the rebase. [Reference](https://git-scm.com/book/en/v2/Git-Branching-Rebasing#:~:text=In%20Git%2C%20there%20are%20two%20main%20ways%20to%20integrate%20changes%20from%20one%20branch%20into%20another%3A%20the%20merge%20and%20the%20rebase)
+      [Reference](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)
 
 #### Q40. Which user should be created first during setting up of SSH?
 
@@ -1264,7 +1264,7 @@ broccoli
 - [ ] Press the slash(/) key on any page of the site.
 - [ ] Click the Search tab from the Github Version
 - [ ] Click the advanced Search link.
-- [x] Click the search box and type your searc query.
+- [x] Click the search box and type your search query.
 
 #### Q137. Assigning an issue to a person implies that they \_\_\_\_.
 
@@ -1463,3 +1463,36 @@ broccoli
 - [ ] Vscode
 - [ ] Company:microsoft repo:vscode
 - [ ] Microsoft/vscode
+
+#### Q165. What is the purpose of the git clone command?
+
+- [ ] To create a new repository from scratch
+- [ ] To initialize a new repository
+- [x] To copy an existing repository
+- [ ] To delete a repository
+
+**Explanation**
+
+- The git clone command is used to create a local copy of an existing Git repository. It downloads the entire repository, including its history and all branches, from a remote location. The other options describe actions that git clone does not perform.
+
+#### Q166. Which of the following is used to stage changes for the next commit?
+
+- [ ] git stage
+- [x] git add
+- [ ] git push
+- [ ] git commit
+
+**Explanation**
+
+- git add stages the changes, making them ready to be committed in the next commit. It tells Git which changes you want to include in the commit. git commit is used after staging changes to actually create the commit, git push uploads changes to a remote repository, and git stage is not a valid Git command.
+
+#### Q167. How can you create a new branch and switch to it immediately?
+
+- [x] git checkout -b <branch-name>
+- [ ] git branch <branch-name>
+- [ ] git switch <branch-name>
+- [ ] git merge <branch-name>
+
+**Explanation**
+
+- git checkout -b <branch-name> creates a new branch and switches to it in one step. git branch <branch-name> only creates the branch but doesn't switch to it. git switch can switch branches but cannot create them. git merge is used to combine branches, not create or switch between them.

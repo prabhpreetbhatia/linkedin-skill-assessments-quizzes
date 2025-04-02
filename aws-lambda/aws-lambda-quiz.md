@@ -591,3 +591,59 @@
 - [x] IAM role permissions
 - [ ] DynamoDB SDK
 - [ ] admin role
+- [ ]
+
+#### Q76. Which of the following is true about AWS Lambda pricing?
+
+- [ ] You are charged based on the number of Lambda functions you create.
+- [x] You are charged for each Lambda invocation and the duration of execution time.
+- [ ] You are charged based on the memory allocated to the function, irrespective of invocation.
+- [ ] You are charged a flat monthly fee for using Lambda.
+
+**Explanation**
+
+- AWS Lambda charges are based on the number of requests (invocations) and the duration of time the code runs. Lambda pricing is based on the total number of requests and the time your code runs (in increments of 1 millisecond) from the start of the function until it returns or otherwise terminates. The duration is rounded up to the nearest 1ms.
+
+#### Q77. What is the maximum execution timeout for an AWS Lambda function?
+
+- [ ] 5 minutes
+- [x] 15 minutes
+- [ ] 60 minutes
+- [ ] 10 minutes
+
+**Explanation**
+
+- AWS Lambda allows a maximum execution timeout of 15 minutes for a single invocation. After 15 minutes, the function will be automatically terminated, even if the function's process is still running. This is useful for long-running tasks but imposes a limit to ensure scalability and efficiency.
+
+#### Q78. Which of the following triggers can NOT directly invoke a Lambda function?
+
+- [ ] Amazon S3
+- [x] Amazon RDS
+- [ ] Amazon DynamoDB Streams
+- [ ] Amazon API Gateway
+
+**Explanation**
+
+- Amazon RDS (Relational Database Service) cannot directly trigger a Lambda function. RDS is a managed database service and does not have built-in functionality to trigger Lambda directly. However, other services like S3, DynamoDB Streams, and API Gateway can trigger Lambda functions when specific events occur (e.g., file uploads, data changes, API calls).
+
+#### Q79. You work for a company that has an AWS cloud deployment utilizing Lambda functions for various tasks. You need to select the appropriate resource types and sizes for these tasks. How should you optimize the amount of memory configured for Lambda functions on your AWS cloud?
+
+- [ ] Use CloudTrail to track all API calls made on the system.
+- [x] Use CloudWatch to monitor memory-bound functions.
+- [ ] Utilize CloudFront for caching data for end users.
+- [ ] Create a new VPC with an AWS Batch computing environment in it.
+
+**Explanation**
+
+- `You would use CloudWatch to monitor memory-bound functions and create an alarm when memory consumption nears a preset limit. This will help you find out when memory consumption reaches close to the preset maximum value so that you can avoid processing bottlenecks by increasing the configured memory for the functions. AWS CloudWatch allows you to monitor the AWS system in real time by monitoring and tracking resource metrics.`
+
+#### Q80. You are running a photo-sharing website using various AWS services. You have an AWS Lambda function that performs image resizing and cropping whenever a user uploads a picture to an S3 bucket. You need to find a way to allow other AWS accounts and services to invoke this function when necessary. What would you do to implement this functionality?
+
+- [ ] Use an identity-based policy to grant the needed permissions.
+- [x] Use a resource-based policy to grant the needed permissions.
+- [ ] Create an IAM user group to allow access to resources.
+- [ ] Set the permissions for the S3 bucket to public.
+
+**Explanation**
+
+- `You would use a resource-based policy to grant the needed permissions. A resource-based policy is attached to an AWS resource such as an Amazon Simple Storage Service (S3) bucket, a virtual private cloud (VPC) endpoint, AWS Key Management Service (KMS) encryption keys, and Amazon Simple Queueing Service (SQS) queues. Using a resource-based policy, you specify the principal who can access the resource and their permissible actions on the resource. A principal can be an account, user, role, or session principal. Session principals can be IAM federated users or role sessions. Policies are AWS objects that specify the permissions of an identity or a resource. You can choose an identity-based or resource-based policy when you create a permissions policy for restricted access to resources.`

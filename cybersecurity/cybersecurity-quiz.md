@@ -202,7 +202,7 @@
 
 #### Q27. Two competing online retailers process credit card transactions for customers in countries on every continent. One organization is based in the United States. The other is based in the Netherlands. With which regulation must both countries comply while ensuring the security of these transactions?
 
-- [ ] Federal Information Security Managment Act (FISMA)
+- [ ] Federal Information Security Management Act (FISMA)
 - [x] Payment Card Industry Data Security Standard (PCI-DSS)
 - [ ] General Data Protection Regulation (GDPR)
 - [ ] International Organization for Standardization and International Electrotechnical Commission (ISO/IEC 27018)
@@ -215,12 +215,12 @@
 
 - [ ] Common event format
 - [ ] common weakness enumeration
-- [x] common vulnerabilties and exposures
+- [x] common vulnerabilities and exposures
 - [ ] common vulnerability scoring system
 
 **Explanation**: The Common Vulnerabilities and Exposures (`CVE`) system provides a reference-method for publicly known information-security vulnerabilities and exposures.
 
-#### Q29. Which type of application can intercept sensative information such as passwords on a network segment?
+#### Q29. Which type of application can intercept sensitive information such as passwords on a network segment?
 
 - [ ] log server
 - [ ] network scanner
@@ -236,7 +236,7 @@
 - [ ] aggregation
 - [x] inference
 - [ ] SQL injection
-- [ ] cross-origin resouce sharing
+- [ ] cross-origin resource sharing
 
 **Explanation**: An `Inference Attack` is a data mining technique performed by analyzing data in order to illegitimately gain knowledge about a subject or database. A subject's sensitive information can be considered as leaked if an adversary can infer its real value with a high confidence. **Source**: ([Wikipedia](https://en.wikipedia.org/wiki/Inference_attack)).
 
@@ -1314,3 +1314,36 @@ What is the next step you should take to best fulfill your responsibilities and 
 - [ ] Phishing
 - [ ] Ransomware
 - [ ] Malware
+
+#### Q173. What is the purpose of a VPN (Virtual Private Network) in cybersecurity?
+
+- [ ] To improve internet speed
+- [x] To anonymize internet activity and encrypt data transmission
+- [ ] To monitor network traffic for malicious activity
+- [ ] To block malware and viruses
+
+**Explanation**
+
+- A VPN (Virtual Private Network) creates a secure, encrypted connection over a less secure network, such as the internet. It hides the user's IP address, encrypts data being transmitted, and makes it harder for hackers or third parties to intercept communications. The primary purpose of a VPN is to protect user privacy and secure data from unauthorized access.
+
+#### Q174. What is the primary function of a firewall in a network?
+
+- [ ] Encrypt data before transmission
+- [x] Monitor and control incoming and outgoing network traffic
+- [ ] Provide physical security for servers
+- [ ] Manage user access to applications
+
+**Explanation**
+
+- A firewall is a network security device that monitors and filters incoming and outgoing network traffic based on security rules. Its main purpose is to establish a barrier between an internal trusted network and untrusted external networks, such as the internet. While it can sometimes be involved in managing access or enhancing security protocols, its core function is to filter traffic.
+
+#### Q175. Which of the following is a common method attackers use to gain unauthorized access to systems?
+
+- [ ] Phishing
+- [x] Encryption
+- [ ] Data anonymization
+- [ ] Two-factor authentication
+
+**Explanation**
+
+- Phishing is a type of cyber attack where attackers trick individuals into providing sensitive information such as usernames, passwords, or financial details by pretending to be legitimate entities. The attacker often uses fake emails, websites, or text messages. The other options (encryption, data anonymization, and two-factor authentication) are security measures that help protect systems.

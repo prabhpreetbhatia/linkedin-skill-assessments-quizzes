@@ -225,9 +225,9 @@ instance.password
 #### Q17. Which statement does NOT describe the object-oriented programming concept of encapsulation?
 
 - [ ] It protects the data from outside interference.
-- [ ] A parent class is encapsulated and no data from the parent class passes on to the child class.
+- [x] A parent class is encapsulated and no data from the parent class passes on to the child class.
 - [ ] It keeps data and the methods that can manipulate that data in one place.
-- [x] It only allows the data to be changed by methods.
+- [ ] It only allows the data to be changed by methods.
 
 [Reference](https://www.scaler.com/topics/python/encapsulation-in-python/)
 
@@ -2593,25 +2593,21 @@ The first loop runs for `m` times and the inner loop will run for `n` times. The
 - [x] 2
 - [ ] 16
 
-#### Q178. How would you create a list of tuples matching these lists of characters and actors?
+#### Q178. Let the lists 'characters' and 'actors' be defined as given. Which of the following lines of code gives the desired output?
 
 ```python
 characters = ["Iron Man", "Spider Man", "Captain America"]
 actors = ["Downey", "Holland", "Evans"]
 
-#example output : [("Iron Man", "Downey), ("Spider Man", "Holland"), ("Captain America", "Evans")]
+#Desired output : [("Iron Man", "Downey), ("Spider Man", "Holland"), ("Captain America", "Evans")]
 ```
 
-- [x] zip (characters, actors)
-- [ ] {x:y for x in characters for y in actors}
-- [ ] [(x,y) for x in characters for y in actors]
-- [ ] &shy;
+- [ ] print( zip( characters, actors ) )
+- [ ] print( { x: y for x in characters for y in actors } )
+- [ ] print( [ ( x, y ) for x in characters for y in actors ] )
+- [x] print( list( zip( characters, actors ) ) )
 
-```
-d = {}
-for x in range(1, len(characters)):
-    d[x] = actors [x]
-```
+Explanation: zip() is the correct function for this usecase. However, zip() makes a zip type object which is an iterator. Therefore, using list() is necessary to convert the zip object into a list of tuples that can be displayed or accessed directly. The other options have logical errors.
 
 #### Q179. When is the `if __name__ == "__main__":` block executed in a Python script?
 
@@ -2676,3 +2672,25 @@ The code defines a `square` function to calculate the square of a number. It the
 - [ ] Hello {name1} and {name2}
 - [ ] Error
 - [ ] Hello and
+
+### Q185. What will be the ouput of the following code snippet?
+
+```python
+def outer_func(x):
+    y = x + 1
+    def inner_func():
+        return y + x
+    return inner_func
+
+x = 10
+y = 20
+closure_func = outer_func(x)
+print(closure_func())
+```
+
+- [ ] 30
+- [x] 21
+- [ ] 11
+- [ ] 31
+
+**Explanation**: When `outer_func(10)` is called, `y` is set to 11 within `outer_func`. The `inner_func`, which has access to `outer_func`'s scope, returns `y` + `x`. When `closure_func()` is called, it uses `y` = `11` (from `outer_func`) and `x` = `10` from the global scope, not from the function’s argument. Therefore, `closure_func()` returns 11 + 10 = 21.
